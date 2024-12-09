@@ -1,4 +1,4 @@
-import WeatherCard from "@/components/weather/weather-card";
+import WeatherCard from "@/components/rox-components/weather/weather-card";
 
 const WeatherPage = () => {
   return (

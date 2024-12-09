@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AlertTriangle } from "lucide-react";
-import { Card } from "../ui/card";
+import { Card } from "../../ui/card";
 
 export default function WeatherCard() {
   const [isHovered, setIsHovered] = useState(false);
