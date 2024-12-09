@@ -5,7 +5,7 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { DashboardIcon, PersonIcon } from "@radix-ui/react-icons";
+import { PersonIcon } from "@radix-ui/react-icons";
 
 export default function FloatingNav() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,11 +17,11 @@ export default function FloatingNav() {
   const navItems = [
     { name: "Home", link: "/", icon: <Home className="h-4 w-4" /> },
     {
-      name: "Dashboard",
-      link: "/dashboard",
-      icon: <DashboardIcon className="h-4 w-4" />,
+      name: "Weather",
+      link: "/weather",
+      icon: "☁️",
     },
-    { name: "Admin", link: "/admin", icon: <PersonIcon className="h-4 w-4" /> },
+    { name: "Admin", link: "#", icon: <PersonIcon className="h-4 w-4" /> },
   ];
 
   useEffect(() => {

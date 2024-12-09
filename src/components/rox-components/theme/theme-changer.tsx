@@ -9,7 +9,7 @@ export function ThemeChanger() {
 
   return (
     <Button
-      variant="outline"
+      variant="rounded"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >

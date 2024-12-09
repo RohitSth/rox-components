@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Link from "next/link";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ThemeProvider } from "@/context/theme/theme-context";
 import { ThemeChanger } from "@/components/rox-components/theme/theme-changer";
+import FloatingNavbar from "@/components/rox-components/navbar/floating-navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,12 +34,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <AuroraBackground>
-            <Link
-              href="/"
-              className="absolute top-4 left-1/2 -translate-x-1/2 cursor-pointer bg-white rounded-full text-black uppercase text-xl font-bold px-1 hover:text-white transition-colors duration-300 hover:bg-sky-500"
-            >
-              ⾕
-            </Link>
+            <FloatingNavbar />
             <div className="absolute top-4 right-4 flex gap-2 items-center z-40">
               <ThemeChanger />
             </div>
