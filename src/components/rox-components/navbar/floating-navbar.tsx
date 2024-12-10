@@ -6,6 +6,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { PersonIcon } from "@radix-ui/react-icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function FloatingNav() {
   const [isVisible, setIsVisible] = useState(false);
@@ -73,17 +78,24 @@ export default function FloatingNav() {
           <ul className="flex items-center px-1 h-10 gap-x-1">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  href={item.link}
-                  className={cn(
-                    "flex items-center justify-center w-10 h-10 rounded-full transition-colors",
-                    pathname === item.link
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/10"
-                  )}
-                >
-                  <span>{item.icon}</span>
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={item.link}
+                      className={cn(
+                        "flex items-center justify-center w-10 h-10 rounded-full transition-colors",
+                        pathname === item.link
+                          ? "text-primary bg-primary/10"
+                          : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                      )}
+                    >
+                      <span>{item.icon}</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <span>{item.name}</span>
+                  </TooltipContent>
+                </Tooltip>
               </li>
             ))}
           </ul>
