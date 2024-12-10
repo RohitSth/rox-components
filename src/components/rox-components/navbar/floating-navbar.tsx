@@ -21,7 +21,11 @@ export default function FloatingNav() {
       link: "/weather",
       icon: "☁️",
     },
-    { name: "Admin", link: "#", icon: <PersonIcon className="h-4 w-4" /> },
+    {
+      name: "Carousel",
+      link: "carousel-timeline",
+      icon: <PersonIcon className="h-4 w-4" />,
+    },
   ];
 
   useEffect(() => {
