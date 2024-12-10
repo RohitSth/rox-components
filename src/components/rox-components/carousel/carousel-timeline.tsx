@@ -24,18 +24,18 @@ export function TimelineCarousel({ data }: TimelineCarouselProps) {
 
   return (
     <div
-      className="w-full max-w-7xl mx-auto px-4 flex flex-col
+      className="w-full max-w-7xl mx-auto flex flex-col
      items-center"
     >
-      <div className="relative ">
+      <div className="relative border-2 rounded-lg">
         <Carousel>
-          <CarouselContent>
+          <CarouselContent className="px-3">
             {activeEvents.map((event) => (
               <CarouselItem
                 key={event.id}
-                className="md:basis-1/2 lg:basis-1/3"
+                className="md:basis-1/2 lg:basis-1/3 py-5 "
               >
-                <Card className="overflow-hidden shadow-lg h-[400px] w-full">
+                <Card className="overflow-hidden h-[400px] w-full shadow-lg shadow-[#3a3737]/40 hover:shadow-[#3a3737] transition-all duration-300 ease-in-out">
                   <CardContent className="p-0 h-full flex flex-col">
                     <div className="relative h-[300px] w-full overflow-hidden">
                       <Image

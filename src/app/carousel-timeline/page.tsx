@@ -137,9 +137,7 @@ const timelineData = [
 export default function Page() {
   return (
     <div className="size-full relative flex justify-center items-center">
-      <div className="container mx-auto">
-        <TimelineCarousel data={timelineData} />
-      </div>
+      <TimelineCarousel data={timelineData} />
     </div>
   );
 }
